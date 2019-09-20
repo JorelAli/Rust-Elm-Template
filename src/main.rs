@@ -22,8 +22,6 @@ fn main() {
           <script>
             {elm}
           </script>
-          <!--<link rel="stylesheet" href="whatever-you-want.css">
-          <script src="main.js"></script>-->
         </head>
         
         <body>
@@ -38,25 +36,6 @@ fn main() {
     "#,
     css = include_str!("../www/style.css"),
     elm = include_str!("../www/main.js"));
-
-    /*let html = format!(r#"
-    <html>
-        <head>
-        <title>My title</title>
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-        <style>{css}</style>
-        </head>
-        <body>
-        {body}
-        <script>{js}</script>
-        </body>
-    </html>
-    "#,
-    css = include_str!("../www/style.css"),
-    body = include_str!("../www/body.html"),
-    js = include_str!("../www/dist.js"));*/
-
-    //let html = include_str!("../www/index.html");
 
     run(
         "",
