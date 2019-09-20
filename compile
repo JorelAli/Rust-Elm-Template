@@ -1,2 +1,8 @@
 #!/bin/sh
-nix-shell -p cargo pkg-config webkitgtk --pure --run 'cargo build --release'
+nix-shell -p cargo pkg-config webkitgtk elmPackages.elm --pure --run "\
+	echo '== Building Elm to main.js ==' && \
+	cd www && \
+	elm make src/Main.elm --output=main.js --optimize && \
+	cd .. && \
+	echo '== Building Rust project ==' && \
+	cargo build --release"
