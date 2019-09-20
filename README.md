@@ -1,5 +1,7 @@
 # Rust-Elm-Template
 
+> **NOTE**: This template is "production ready" (in the sense it'll work), but this README is very long, and the code has not been fully optimised. When this note box is gone, you can be assured that everything's neat and tidy!
+
 A template for creating web-based desktop applications (similar to Electron, but not Electron).
 
 It uses native WebView, in particular WebKit for Linux and macOS, and MSHTML on Windows.
