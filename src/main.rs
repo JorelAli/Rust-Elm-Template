@@ -16,25 +16,25 @@ fn main() {
         <head>
           <meta charset="UTF-8">
           <title>Main</title>
-          <style>
-            {css}
-          </style>
-          <script>
-            {elm}
-          </script>
+
+          <!-- Styles -->
+          <!--<style>{bootstrap}</style>-->
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+          <style>{css}</style>
+
+          <!-- Elm -->
+          <script>{elm}</script>
         </head>
         
         <body>
           <div id="elm"></div>
-          <script>
-          var app = Elm.Main.init({{
-            node: document.getElementById('elm')
-          }});
-          </script>
+          <script> var app = Elm.Main.init({{ node: document.getElementById('elm') }}); </script>
         </body>
         </html>
     "#,
     css = include_str!("../www/style.css"),
+    bootstrap = include_str!("../www/bootstrap.min.css"),
     elm = include_str!("../www/main.js"));
 
     run(
