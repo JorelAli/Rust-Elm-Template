@@ -1,0 +1,8 @@
+[package]
+name = "projectname"
+description = "Project description here"
+version = "0.0.1"
+authors = ["Jorel Ali <jorel.k.ali@gmail.com>"]
+
+[dependencies]
+web-view = { git = "https://github.com/huytd/web-view" }

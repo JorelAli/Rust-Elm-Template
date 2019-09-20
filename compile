@@ -1,0 +1,2 @@
+#!/bin/sh
+nix-shell -p cargo pkg-config webkitgtk --pure --run 'cargo build --release'
