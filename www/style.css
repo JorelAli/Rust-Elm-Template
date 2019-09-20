@@ -1,0 +1,10 @@
+body {
+	background-color: #b5f5ff;
+	padding: 30px 30px;
+}
+
+.centered {
+	margin: auto;
+	width: 50%;
+	top: 50%;
+}

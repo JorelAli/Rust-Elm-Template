@@ -4940,8 +4940,11 @@ var elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 			return 3;
 	}
 };
-var elm$html$Html$button = _VirtualDom_node('button');
+var elm$html$Html$br = _VirtualDom_node('br');
 var elm$html$Html$div = _VirtualDom_node('div');
+var elm$html$Html$h1 = _VirtualDom_node('h1');
+var elm$html$Html$h2 = _VirtualDom_node('h2');
+var elm$html$Html$header = _VirtualDom_node('header');
 var elm$html$Html$input = _VirtualDom_node('input');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
@@ -5052,15 +5055,37 @@ var author$project$Main$view = function (model) {
 		_List_fromArray(
 			[
 				A2(
+				elm$html$Html$header,
+				_List_Nil,
+				_List_fromArray(
+					[
+						A2(
+						elm$html$Html$h1,
+						_List_Nil,
+						_List_fromArray(
+							[
+								elm$html$Html$text('Sample project')
+							])),
+						A2(
+						elm$html$Html$h2,
+						_List_Nil,
+						_List_fromArray(
+							[
+								elm$html$Html$text('Some mild description')
+							]))
+					])),
+				A2(elm$html$Html$br, _List_Nil, _List_Nil),
+				A2(
 				elm$html$Html$input,
 				_List_fromArray(
 					[
 						elm$html$Html$Attributes$class('form-control'),
-						elm$html$Html$Attributes$placeholder('Text to oodle'),
+						elm$html$Html$Attributes$placeholder('Enter text here'),
 						elm$html$Html$Attributes$value(model.z),
 						elm$html$Html$Events$onInput(elm$core$Basics$identity)
 					]),
 				_List_Nil),
+				A2(elm$html$Html$br, _List_Nil, _List_Nil),
 				A2(
 				elm$html$Html$div,
 				_List_Nil,
@@ -5068,16 +5093,6 @@ var author$project$Main$view = function (model) {
 					[
 						elm$html$Html$text(
 						author$project$Main$oodle(model.z))
-					])),
-				A2(
-				elm$html$Html$button,
-				_List_fromArray(
-					[
-						elm$html$Html$Attributes$class('btn btn-primary')
-					]),
-				_List_fromArray(
-					[
-						elm$html$Html$text('button!')
 					]))
 			]));
 };

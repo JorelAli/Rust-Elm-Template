@@ -1,5 +1,5 @@
 import Browser
-import Html exposing (Html, Attribute, div, input, text, button)
+import Html exposing (Html, Attribute, div, input, text, button, h1, h2, header, br)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput)
 import Regex
@@ -56,7 +56,13 @@ oodle input =
 view : Model -> Html Msg
 view model =
   div []
-    [ input [ class "form-control", placeholder "Text to oodle", value model.content, onInput Change ] []
+    [ header [] 
+      [ 
+        h1 [] [ text "Sample project" ]
+      , h2 [] [ text "Some mild description" ]
+      ]
+    , br [] []
+    , input [ class "form-control", placeholder "Enter text here", value model.content, onInput Change ] []
+    , br [] []
     , div [] [ text (oodle model.content) ]
-    , button [ class "btn btn-primary"] [ text "button!" ]
     ]
